@@ -1,5 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -36,6 +37,18 @@ const plugins = () => {
                 removeComments: isProd,
                 collapseWhitespace: isProd,
             },
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/html/_header.html'),
+            location: 'header',
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/html/_body.html'),
+            location: 'main',
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/html/_footer.html'),
+            location: 'footer',
         }),
         new CopyWebpackPlugin({
             patterns: [
@@ -131,15 +144,18 @@ module.exports = {
             {
                 test: /\.(?:gif|png|jpg|jpeg|svg)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: './img/[name][ext]',
+                },
             },
         ],
     },
     devServer: {
-        port: 3333,
+        port: 3000,
         historyApiFallback: true,
         contentBase: path.resolve(__dirname, './dist'),
-        hot: false,
+        hot: true,
         compress: true,
-        open: true,
+        open: false,
     },
 };
