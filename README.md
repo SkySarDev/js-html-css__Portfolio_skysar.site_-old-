@@ -22,8 +22,6 @@
 
 -   [[html-webpack-plugin]](https://www.npmjs.com/package/html-webpack-plugin) Plugin that simplifies creation of HTML files to serve your bundles
 
--   [[html-webpack-partials-plugin]](https://www.npmjs.com/package/html-webpack-partials-plugin) Extends HTML Webpack Plugin to add support for partials or templates.
-
 -   [[image-minimizer-webpack-plugin]](https://www.npmjs.com/package/image-minimizer-webpack-plugin) Plugin and Loader for webpack to optimize (compress) all images using [imagemin](https://github.com/imagemin/imagemin).
 
 -   [[terser-webpack-plugin]](https://www.npmjs.com/package/terser-webpack-plugin) This plugin uses [terser](https://github.com/terser/terser) to minify your JavaScript.
