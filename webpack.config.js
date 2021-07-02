@@ -130,7 +130,11 @@ module.exports = {
                 },
             },
             {
-                test: /\.(?:gif|png|jpg|jpeg|svg)$/i,
+                test: /\.svg$/i,
+                type: 'asset/inline',
+            },
+            {
+                test: /\.(?:gif|png|jpg|jpeg)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: './img/ico/[name][ext]',
@@ -139,7 +143,7 @@ module.exports = {
         ],
     },
     devServer: {
-        port: 3000,
+        port: 7777,
         historyApiFallback: true,
         contentBase: path.resolve(__dirname, './dist'),
         hot: true,
