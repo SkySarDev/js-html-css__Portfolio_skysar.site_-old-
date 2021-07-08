@@ -130,8 +130,11 @@ module.exports = {
                 },
             },
             {
-                test: /\.svg$/i,
-                type: 'asset/inline',
+                test: /\.svg$/,
+                use: [
+                  'svg-sprite-loader',
+                  'svgo-loader'
+                ]
             },
             {
                 test: /\.(?:gif|png|jpg|jpeg)$/i,
