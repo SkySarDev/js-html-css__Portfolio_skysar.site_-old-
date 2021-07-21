@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const fs = require('fs');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -22,6 +23,32 @@ const optimization = () => {
     }
 
     return configObj;
+};
+
+const processNestedHtml = (content, loaderContext, resourcePath = '') => {
+    let fileDir = resourcePath === '' ? path.dirname(loaderContext.resourcePath) : path.dirname(resourcePath);
+    const INCLUDE_PATTERN = /\<include src=\"(\.\/)?(.+)\"\/?\>(?:\<\/include\>)?/gi;
+
+    const replaceHtml = (match, pathRule, src) => {
+        if (pathRule === './') {
+            fileDir = loaderContext.context;
+        }
+        const filePath = path.resolve(fileDir, src);
+        loaderContext.dependency(filePath);
+        const html = fs.readFileSync(filePath, 'utf8');
+        return processNestedHtml(html, loaderContext, filePath);
+    };
+
+    if (!INCLUDE_PATTERN.test(content)) {
+        return content;
+    } else {
+        return content.replace(INCLUDE_PATTERN, replaceHtml);
+    }
+};
+
+const processHtmlLoader = (content, loaderContext) => {
+    let newContent = processNestedHtml(content, loaderContext);
+    return newContent;
 };
 
 const plugins = () => {
@@ -114,6 +141,12 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: 'html-loader',
+                options: {
+                    sources: false,
+                    minimize: false,
+                    esModule: false,
+                    preprocessor: processHtmlLoader,
+                },
             },
             {
                 test: /\.(woff(2)?|eot|ttf|otf)$/,
@@ -131,10 +164,7 @@ module.exports = {
             },
             {
                 test: /\.svg$/,
-                use: [
-                  'svg-sprite-loader',
-                  'svgo-loader'
-                ]
+                use: ['svg-sprite-loader', 'svgo-loader'],
             },
             {
                 test: /\.(?:gif|png|jpg|jpeg)$/i,
