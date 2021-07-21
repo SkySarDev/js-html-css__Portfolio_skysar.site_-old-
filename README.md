@@ -1,5 +1,4 @@
 <h1 align="center">My setup config Webpack 5</h2>
-<hr>
 <h2 align="center">Plugins</h2>
 
 -   [[babel]](https://www.npmjs.com/package/babel-loader) Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.
@@ -25,3 +24,5 @@
 -   [[image-minimizer-webpack-plugin]](https://www.npmjs.com/package/image-minimizer-webpack-plugin) Plugin and Loader for webpack to optimize (compress) all images using [imagemin](https://github.com/imagemin/imagemin).
 
 -   [[terser-webpack-plugin]](https://www.npmjs.com/package/terser-webpack-plugin) This plugin uses [terser](https://github.com/terser/terser) to minify your JavaScript.
+
+-   [[svg-sprite-loader]](https://www.npmjs.com/package/svg-sprite-loader) Webpack loader for creating SVG sprites.
