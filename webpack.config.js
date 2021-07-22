@@ -82,16 +82,6 @@ const plugins = () => {
                         ['gifsicle', { interlaced: true }],
                         ['jpegtran', { progressive: true }],
                         ['optipng', { optimizationLevel: 5 }],
-                        [
-                            'svgo',
-                            {
-                                plugins: [
-                                    {
-                                        removeViewBox: false,
-                                    },
-                                ],
-                            },
-                        ],
                     ],
                 },
             })
@@ -170,7 +160,7 @@ module.exports = {
                 test: /\.(?:gif|png|jpg|jpeg)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: './img/ico/[name][ext]',
+                    filename: '[path][name][ext]',
                 },
             },
         ],

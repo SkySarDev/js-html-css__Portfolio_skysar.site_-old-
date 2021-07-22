@@ -1,7 +1,7 @@
 {
-    "name": "blank-webpack5",
+    "name": "portfolio_skysar.site",
     "version": "1.0.0",
-    "description": "blank-webpack5",
+    "description": "Portfolio_skysar.site",
     "main": "main.js",
     "scripts": {
         "build": "cross-env NODE_ENV=production webpack --mode production",
@@ -47,6 +47,7 @@
         "webpack-dev-server": "^3.11.2"
     },
     "dependencies": {
+        "bootstrap": "^5.0.2",
         "normalize.css": "^8.0.1"
     }
 }

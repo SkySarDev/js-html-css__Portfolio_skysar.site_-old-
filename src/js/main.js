@@ -1,2 +1,2 @@
 import '../scss/main.scss';
-import '../index.html';
+if (process.env.NODE_ENV === 'development') import('../index.html');
