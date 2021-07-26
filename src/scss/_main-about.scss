@@ -1,0 +1,66 @@
+.about {
+
+  &-img {
+    margin-bottom: em(20);
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 390px;
+      opacity: 0.8;
+      margin: 0 auto;
+    }
+  }
+
+  &-descr {
+    width: 290px;
+    margin: 0 auto;
+    padding: 0 em(15);
+
+    &__title {
+      @include font-second;
+      font-size: rem(20);
+      text-align-last: center;
+      font-weight: 700;
+      margin: 0 0 em(5, 20);
+    }
+
+    &__subtile {
+      text-align: center;
+      position: relative;
+      margin-bottom: em(25);
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        width: 50%;
+        height: 1px;
+        background-color: $font-color-dark;
+        margin: auto;
+      }
+    }
+
+    &__text {
+      margin-bottom: em(25);
+    }
+
+    &__button {
+      text-align: center;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+
+    &-descr {
+      order: 1;
+    }
+
+    &-img {
+      order: 2;
+    }
+  }
+}

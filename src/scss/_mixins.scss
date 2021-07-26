@@ -1,0 +1,19 @@
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+  @return ($pixels / $context) * 1em;
+}
+
+@function rem($pixels, $context: $browser-context) {
+  @return ($pixels / $context) * 1rem;
+}
+
+@mixin font-main() {
+  font-family: Neucha-Regular, sans-serif;
+  letter-spacing: 2px;
+}
+
+@mixin font-second() {
+  font-family: Comfortaa-Bold, sans-serif;
+  letter-spacing: 0;
+}

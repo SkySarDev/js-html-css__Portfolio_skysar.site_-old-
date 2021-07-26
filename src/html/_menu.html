@@ -1,7 +1,7 @@
 <menu class="menu">
     <div class="container">
         <div class="menu__row row">
-            <div class="menu__socials col">
+            <div class="menu__socials col col-lg-3">
                 <ul class="menu__socials-list">
                     <li class="menu__socials-item">
                         <a href="#" target="_blank">
@@ -33,9 +33,26 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-3 menu__burger-col">
-                <button class="menu__burger">
-                </button>
+            <nav class="menu__nav col-lg">
+                <ul class="menu__nav-list">
+                    <li class="menu__nav-link"><a href="/about">About me</a></li>
+                    <li class="menu__nav-link"><a href="/projects">Projects</a></li>
+                    <li class="menu__nav-link"><a href="/skills">Skills</a></li>
+                    <li class="menu__nav-link"><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu__lang-burger col-4 col-lg-1">
+                <div class="menu__lang">
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="#lang-ru"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="menu__burger">
+                    <button class="menu__burger-btn">
+                    </button>
+                </div>
             </div>
         </div>
     </div>

@@ -2,13 +2,15 @@
 @import 'resetcss';
 @import 'fonts';
 @import 'vars';
+@import 'mixins';
 @import 'bootstrap';
 
-@import 'menu';
-@import 'main';
-
-
 body {
-    // font-size: 100%;
-    // font-family: $font-main;
+  @include font-main;
+  color: $font-color-dark;
 }
+
+@import 'menu';
+@import 'main-block';
+@import 'main-about';
+@import 'main-projects';

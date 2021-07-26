@@ -1,0 +1,23 @@
+.projects {
+  &-item {
+    width: 294px;
+    border: 1px solid $color-line-dark;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: $color-bg-light;
+
+    &__img {
+      width: 282px;
+      border: 1px solid $color-line-light;
+      border-radius: 3px;
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: em(25);
+  }
+
+  &__slider-nav {
+    text-align: center;
+  }
+}
