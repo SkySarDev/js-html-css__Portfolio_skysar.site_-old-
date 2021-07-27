@@ -1,6 +1,4 @@
 .about {
-  margin-top: em(45);
-
   &-img {
     margin-bottom: em(20);
 
@@ -39,7 +37,7 @@
         bottom: -5px;
         width: 50%;
         height: 1px;
-        background-color: $font-color-dark;
+        background-color: $color-line-dark;
         margin: auto;
       }
     }
