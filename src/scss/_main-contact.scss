@@ -1,0 +1,48 @@
+.contact {
+  &__form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+
+    input,
+    textarea {
+      padding: em(10);
+      margin-bottom: em(15);
+      display: block;
+      width: 100%;
+      border: 1px solid $color-line-dark;
+      border-radius: 3px;
+      background-color: $color-bg-light;
+    }
+  }
+
+  &__button {
+    margin-bottom: em(20);
+  }
+
+  &__socials {
+    &-list {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: em(25);
+      }
+    }
+
+    &-icon {
+      width: em(30);
+      height: em(30);
+      fill: $color-icons;
+      transition: fill 0.3s;
+
+      @media (hover: hover) {
+        &:hover {
+          fill: $font-color-dark;
+        }
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@
             skills that I have and my contacts.
           </p>
           <div class="about-descr__button">
-            <a class="button button-dark" href="#" download="">Download CV</a>
+            <a class="button button--dark" href="#" download="">Download CV</a>
           </div>
         </div>
       </div>
@@ -141,41 +141,59 @@
       <h2 class="main__title">Contact</h2>
       <div class="main__content row">
         <div class="contact__form">
-          <input type="text" name="name" placeholder="Your name" />
-          <input type="email" name="email" placeholder="Your email" />
-          <textarea
-            name="message"
-            cols="30"
-            rows="10"
-            placeholder="Your message for me"
-          ></textarea>
-          <button type="submit">Send message</button>
+          <form id="contact-form">
+            <input
+              class="contact__form-name"
+              type="text"
+              name="name"
+              placeholder="Your name"
+              autocomplete="off"
+              required
+            />
+            <input
+              class="contact__form-email"
+              type="email"
+              name="email"
+              placeholder="Your email"
+              autocomplete="off"
+              required
+            />
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              placeholder="Your message for me"
+            ></textarea>
+            <button class="contact__button button button--light" type="submit">
+              Send message
+            </button>
+          </form>
         </div>
         <ul class="contact__socials-list">
           <li class="contact__socials-item">
             <a href="#" target="_blank">
-              <svg>
+              <svg class="contact__socials-icon">
                 <use xlink:href="#github"></use>
               </svg>
             </a>
           </li>
           <li class="contact__socials-item">
             <a href="#" target="_blank">
-              <svg>
+              <svg class="contact__socials-icon">
                 <use xlink:href="#instagram"></use>
               </svg>
             </a>
           </li>
           <li class="contact__socials-item">
             <a href="#" target="_blank">
-              <svg>
+              <svg class="contact__socials-icon">
                 <use xlink:href="#telegram"></use>
               </svg>
             </a>
           </li>
           <li class="contact__socials-item">
             <a href="#" target="_blank">
-              <svg>
+              <svg class="contact__socials-icon">
                 <use xlink:href="#vk"></use>
               </svg>
             </a>
