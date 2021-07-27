@@ -1,53 +1,48 @@
 .main {
+  margin-top: em(45);
 
-    &__block {
-        padding: em(20) 0;
-        border-bottom: 1px solid $color-line-dark;
+  &__block {
+    padding: em(20) 0;
+    border-bottom: 1px solid $color-line-dark;
 
-        &--light {
-            background-color: $color-bg-light;
-        }
-
-        &--darker {
-            background-color: $color-bg-dark;
-        }
+    &--light {
+      background-color: $color-bg-light;
     }
 
-    &__title {
-        text-align: center;
-        font-size: rem(24);
-        margin-bottom: em(20, 24);
-        letter-spacing: 1px;
-
-        &:before {
-            content: '{ ';
-        }
-
-        &:after {
-            content: ' }';
-        }
+    &--darker {
+      background-color: $color-bg-dark;
     }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: rem(24);
+    margin-bottom: em(20, 24);
+    letter-spacing: 1px;
+
+    &:before {
+      content: "{ ";
+    }
+
+    &:after {
+      content: " }";
+    }
+  }
+
+  &__content {
+    justify-content: center;
+  }
 }
 
 .button {
-    display: inline-block;
-    @include font-second;
-    border-radius: 3px;
-    padding: em(10) em(15);
-    color: $font-color-dark;
+  display: inline-block;
+  @include font-second;
+  border-radius: 3px;
+  padding: em(10) em(15);
+  color: $font-color-dark;
 
-    &-dark {
-        border: 1px solid $color-line-dark;
-        background-color: $color-bg-dark;
-    }
-}
-
-.arrow {
-    width: rem(25);
-    height: rem(25);
-    fill: $color-icons;
-
-    &-prev {
-        transform: rotate(180deg);
-    }
+  &-dark {
+    border: 1px solid $color-line-dark;
+    background-color: $color-bg-dark;
+  }
 }

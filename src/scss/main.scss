@@ -1,16 +1,17 @@
-@import '~normalize.css';
-@import 'resetcss';
-@import 'fonts';
-@import 'vars';
-@import 'mixins';
-@import 'bootstrap';
+@import "~normalize.css";
+@import "resetcss";
+@import "fonts";
+@import "vars";
+@import "mixins";
+@import "bootstrap";
 
 body {
   @include font-main;
   color: $font-color-dark;
 }
 
-@import 'menu';
-@import 'main-block';
-@import 'main-about';
-@import 'main-projects';
+@import "menu";
+@import "main-block";
+@import "main-about";
+@import "main-projects";
+@import "main-skills";
