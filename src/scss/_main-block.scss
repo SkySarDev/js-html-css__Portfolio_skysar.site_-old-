@@ -41,8 +41,13 @@
   padding: em(10) em(15);
   color: $font-color-dark;
 
-  &-dark {
+  &--dark {
     border: 1px solid $color-line-dark;
     background-color: $color-bg-dark;
+  }
+
+  &--light {
+    border: 1px solid $color-line-dark;
+    background-color: $color-bg-light;
   }
 }
