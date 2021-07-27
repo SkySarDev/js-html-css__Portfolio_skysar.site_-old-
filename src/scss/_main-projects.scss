@@ -1,23 +1,62 @@
 .projects {
-  &-item {
-    width: 294px;
+  &__wrapper {
+    max-width: 320px;
+    margin-bottom: em(25);
+  }
+
+  &__item {
     border: 1px solid $color-line-dark;
     border-radius: 3px;
     padding: 5px;
     background-color: $color-bg-light;
+    width: 296px;
+    box-shadow: 0 6px 6px rgba(169, 140, 106, 0.2);
 
-    &__img {
-      width: 282px;
+    &-img {
+      width: 284px;
       border: 1px solid $color-line-light;
       border-radius: 3px;
     }
   }
+}
 
-  &__wrapper {
-    margin-bottom: em(25);
+.slider {
+  display: flex;
+  justify-content: center;
+
+  &__arrow {
+    width: rem(25);
+    height: rem(25);
+    fill: $color-icons;
   }
 
-  &__slider-nav {
-    text-align: center;
+  .arrow-prev {
+    transform: rotate(180deg);
+  }
+
+  &__counter {
+    @include font-second;
+    margin: 0 em(15);
+    width: 40px;
+    color: $color-line-dark;
+
+    &-current {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 13px;
+        left: 5px;
+        width: 30px;
+        height: 1px;
+        background-color: $color-line-dark;
+        transform: rotate(140deg);
+      }
+    }
+
+    &-total {
+      text-align: right;
+    }
   }
 }
