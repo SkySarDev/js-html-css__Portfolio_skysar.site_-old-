@@ -1,9 +1,17 @@
 .main {
   margin-top: em(45);
 
+  @include media-breakpoint-up(sm) {
+    font-size: rem(17);
+  }
+
   &__block {
     padding: em(20) 0;
     border-bottom: 1px solid $color-line-dark;
+
+    @include media-breakpoint-up(sm) {
+      padding: em(25) 0;
+    }
 
     &--light {
       background-color: $color-bg-light;
@@ -16,16 +24,29 @@
 
   &__title {
     text-align: center;
-    font-size: rem(24);
-    margin-bottom: em(20, 24);
+    font-size: rem(22);
+    margin-bottom: em(20, 22);
     letter-spacing: 1px;
 
+    @include media-breakpoint-up(sm) {
+      font-size: rem(24);
+    }
+
+    &:before,
+    &:after {
+      font-size: 0.7em;
+      position: relative;
+      bottom: 2px;
+    }
+
     &:before {
-      content: "{ ";
+      content: "<";
+      right: 5px;
     }
 
     &:after {
-      content: " }";
+      content: " />";
+      left: 0;
     }
   }
 

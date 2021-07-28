@@ -20,7 +20,7 @@
       font-size: rem(20);
       text-align-last: center;
       font-weight: 700;
-      margin: 0 0 em(5, 20);
+      margin: 0 0 0.3em;
     }
 
     &__subtitle {
@@ -49,6 +49,14 @@
 
     &__button {
       text-align: center;
+    }
+
+    @include media-breakpoint-up(sm) {
+      width: 330px;
+
+      &__title {
+        font-size: rem(22);
+      }
     }
   }
 

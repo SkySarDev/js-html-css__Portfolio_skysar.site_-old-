@@ -4,6 +4,10 @@
     margin: 0 auto;
     text-align: center;
 
+    @include media-breakpoint-up(sm) {
+      width: 490px;
+    }
+
     input,
     textarea {
       padding: em(10);
@@ -13,6 +17,10 @@
       border: 1px solid $color-line-dark;
       border-radius: 3px;
       background-color: $color-bg-light;
+
+      &::placeholder {
+        color: $font-color-dark;
+      }
     }
   }
 

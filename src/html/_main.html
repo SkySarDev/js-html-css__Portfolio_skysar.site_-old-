@@ -55,8 +55,8 @@
   <section class="main__block main__block--light skills">
     <div class="container">
       <h2 class="main__title">Skills</h2>
-      <div class="main__content row">
-        <div class="skills-card col-sm-6">
+      <div class="main__content row row-cols-sm-2 row-cols-lg-4">
+        <div class="skills-card">
           <div class="skills-card__content">
             <div class="skills-card__header">
               <svg class="skills-card__icon">
@@ -73,7 +73,7 @@
             </div>
           </div>
         </div>
-        <div class="skills-card col-sm-6">
+        <div class="skills-card">
           <div class="skills-card__content">
             <div class="skills-card__header">
               <svg class="skills-card__icon">
@@ -92,7 +92,7 @@
             </div>
           </div>
         </div>
-        <div class="skills-card col-sm-6">
+        <div class="skills-card">
           <div class="skills-card__content">
             <div class="skills-card__header">
               <svg class="skills-card__icon">
@@ -113,7 +113,7 @@
             </div>
           </div>
         </div>
-        <div class="skills-card col-sm-6">
+        <div class="skills-card">
           <div class="skills-card__content">
             <div class="skills-card__header">
               <svg class="skills-card__icon">
@@ -142,26 +142,32 @@
       <div class="main__content row">
         <div class="contact__form">
           <form id="contact-form">
-            <input
-              class="contact__form-name"
-              type="text"
-              name="name"
-              placeholder="Your name"
-              autocomplete="off"
-              required
-            />
-            <input
-              class="contact__form-email"
-              type="email"
-              name="email"
-              placeholder="Your email"
-              autocomplete="off"
-              required
-            />
+            <div class="row">
+              <div class="contact__form-name col-sm">
+                <input
+                        type="text"
+                        name="name"
+                        placeholder="Your name"
+                        autocomplete="off"
+                        required
+                />
+              </div>
+              <div class="contact__form-email col-sm">
+                <input
+                        type="email"
+                        name="email"
+                        placeholder="Your email"
+                        autocomplete="off"
+                        required
+                />
+              </div>
+            </div>
+
+
             <textarea
               name="message"
               cols="30"
-              rows="10"
+              rows="5"
               placeholder="Your message for me"
             ></textarea>
             <button class="contact__button button button--light" type="submit">
