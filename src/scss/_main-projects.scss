@@ -1,7 +1,17 @@
 .projects {
   &__wrapper {
-    max-width: 320px;
+    width: 320px;
     margin-bottom: em(25);
+    overflow: hidden;
+    padding: 0;
+
+    @include media-breakpoint-up(md) {
+        width: 640px;
+    }
+  }
+
+  &__list {
+    display: flex;
   }
 
   &__item {
@@ -11,6 +21,10 @@
     background-color: $color-bg-light;
     width: 296px;
     box-shadow: 0 6px 6px rgba(169, 140, 106, 0.2);
+
+    &-wrapper {
+      padding: 0 rem(12);
+    }
 
     &-img {
       width: 284px;
@@ -28,6 +42,11 @@
     width: rem(25);
     height: rem(25);
     fill: $color-icons;
+
+    @include media-breakpoint-up(md) {
+      width: rem(30);
+      height: rem(30);
+    }
   }
 
   .arrow-prev {
@@ -37,7 +56,7 @@
   &__counter {
     @include font-second;
     margin: 0 em(15);
-    width: 40px;
+    width: em(40);
     color: $color-line-dark;
 
     &-current {
@@ -46,8 +65,8 @@
       &:after {
         content: "";
         position: absolute;
-        top: 13px;
-        left: 5px;
+        top: em(13);
+        left: em(7);
         width: 30px;
         height: 1px;
         background-color: $color-line-dark;

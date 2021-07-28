@@ -125,7 +125,7 @@
     font-size: rem(17);
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     font-size: rem(18);
   }
 }

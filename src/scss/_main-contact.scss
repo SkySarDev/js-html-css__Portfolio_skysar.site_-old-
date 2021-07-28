@@ -1,11 +1,16 @@
 .contact {
   &__form {
     width: 300px;
-    margin: 0 auto;
     text-align: center;
 
     @include media-breakpoint-up(sm) {
       width: 490px;
+    }
+
+    @include media-breakpoint-up(md) {
+      order: 2;
+      width: 550px;
+      padding-right: rem(40);
     }
 
     input,
@@ -22,6 +27,10 @@
         color: $font-color-dark;
       }
     }
+
+    textarea {
+      resize: none;
+    }
   }
 
   &__button {
@@ -32,11 +41,29 @@
     &-list {
       display: flex;
       justify-content: center;
+
+      @include media-breakpoint-up(md) {
+        order: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
     }
 
     &-item {
-      &:not(:last-child) {
-        margin-right: em(25);
+      margin-right: em(25);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include media-breakpoint-up(md) {
+        margin-right: 0;
+        margin-bottom: em(20);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
 
