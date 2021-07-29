@@ -3,18 +3,22 @@
     <div class="container">
       <h2 class="main__title">About me</h2>
       <div class="main__content row">
-        <div class="about-img col-md">
-          <img src="./img/about-img-400.png" alt="About me" />
+        <div class="about__img-wrapper col-md-7 col-xl-6">
+          <div class="about__img"></div>
         </div>
-        <div class="about-descr col-md">
-          <h1 class="about-descr__title">Maxim Biryukov</h1>
-          <p class="about-descr__subtitle">frontend developer</p>
-          <p class="about-descr__text">
-            Welcome to my site-portfolio! <br />Here you can find my works,
-            skills that I have and my contacts.
-          </p>
-          <div class="about-descr__button">
-            <a class="button button--dark" href="#" download="">Download CV</a>
+        <div class="about__description-wrapper col-md-5 col-xl-4">
+          <div class="about__description-content">
+            <h1 class="about__description-title">Maxim Biryukov</h1>
+            <p class="about__description-subtitle">frontend developer</p>
+            <p class="about__description-text">
+              Welcome to my site-portfolio! <br />Here you can find my works,
+              skills that I have and my contacts.
+            </p>
+            <div class="about__description-button">
+              <a class="button button--dark" href="#" download=""
+                >Download CV</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -29,37 +33,41 @@
           <div class="projects__list">
             <div class="projects__item-wrapper">
               <div class="projects__item">
+                <div class="projects__item-zoom"></div>
                 <img
-                        class="projects__item-img"
-                        src="../img/projects/preview/irvas.jpg"
-                        alt="Irvas"
+                  class="projects__item-img"
+                  src="../img/projects/preview/irvas.jpg"
+                  alt="Irvas"
                 />
               </div>
             </div>
             <div class="projects__item-wrapper">
               <div class="projects__item">
+                <div class="projects__item-zoom"></div>
                 <img
-                        class="projects__item-img"
-                        src="../img/projects/preview/be_.jpg"
-                        alt="Be."
+                  class="projects__item-img"
+                  src="../img/projects/preview/be_.jpg"
+                  alt="Be."
                 />
               </div>
             </div>
             <div class="projects__item-wrapper">
               <div class="projects__item">
+                <div class="projects__item-zoom"></div>
                 <img
-                        class="projects__item-img"
-                        src="../img/projects/preview/irvas.jpg"
-                        alt="Irvas"
+                  class="projects__item-img"
+                  src="../img/projects/preview/irvas.jpg"
+                  alt="Irvas"
                 />
               </div>
             </div>
             <div class="projects__item-wrapper">
+              <div class="projects__item-zoom"></div>
               <div class="projects__item">
                 <img
-                        class="projects__item-img"
-                        src="../img/projects/preview/be_.jpg"
-                        alt="Be."
+                  class="projects__item-img"
+                  src="../img/projects/preview/be_.jpg"
+                  alt="Be."
                 />
               </div>
             </div>
@@ -84,7 +92,7 @@
   <section class="main__block main__block--light skills">
     <div class="container">
       <h2 class="main__title">Skills</h2>
-      <div class="main__content row row-cols-sm-2 row-cols-lg-4">
+      <div class="main__content row row-cols-sm-2 row-cols-xl-4">
         <div class="skills-card">
           <div class="skills-card__content">
             <div class="skills-card__header">
@@ -169,25 +177,25 @@
     <div class="container">
       <h2 class="main__title">Contact</h2>
       <div class="main__content row">
-        <div class="contact__form col-md">
+        <div class="contact__form col-md-10 col-lg-9">
           <form id="contact-form">
             <div class="row">
               <div class="contact__form-name col-sm">
                 <input
-                        type="text"
-                        name="name"
-                        placeholder="Your name"
-                        autocomplete="off"
-                        required
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  autocomplete="off"
+                  required
                 />
               </div>
               <div class="contact__form-email col-sm">
                 <input
-                        type="email"
-                        name="email"
-                        placeholder="Your email"
-                        autocomplete="off"
-                        required
+                  type="email"
+                  name="email"
+                  placeholder="Your email"
+                  autocomplete="off"
+                  required
                 />
               </div>
             </div>
@@ -202,13 +210,16 @@
             </button>
           </form>
         </div>
-        <ul class="contact__socials-list col-md-2">
+        <ul class="contact__socials-list col-md-2 col-lg-3">
           <li class="contact__socials-item">
             <a href="#" target="_blank">
               <svg class="contact__socials-icon">
                 <use xlink:href="#github"></use>
               </svg>
             </a>
+            <div class="contact__socials-link">
+              <a href="#" target="_blank">/SkySarDev</a>
+            </div>
           </li>
           <li class="contact__socials-item">
             <a href="#" target="_blank">
@@ -216,6 +227,9 @@
                 <use xlink:href="#instagram"></use>
               </svg>
             </a>
+            <div class="contact__socials-link">
+              <a href="#" target="_blank">/skysar_dev</a>
+            </div>
           </li>
           <li class="contact__socials-item">
             <a href="#" target="_blank">
@@ -223,6 +237,9 @@
                 <use xlink:href="#telegram"></use>
               </svg>
             </a>
+            <div class="contact__socials-link">
+              <a href="#" target="_blank">/skysar_dev</a>
+            </div>
           </li>
           <li class="contact__socials-item">
             <a href="#" target="_blank">
@@ -230,6 +247,9 @@
                 <use xlink:href="#vk"></use>
               </svg>
             </a>
+            <div class="contact__socials-link">
+              <a href="#" target="_blank">/skysar_dev</a>
+            </div>
           </li>
         </ul>
       </div>

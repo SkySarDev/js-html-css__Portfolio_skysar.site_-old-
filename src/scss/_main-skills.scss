@@ -13,13 +13,21 @@
       margin-bottom: rem(24);
 
       &:nth-child(even) {
-          justify-content: flex-start;
-        }
-
-      &:nth-last-of-type(-n+2) {
-        margin-bottom: 0;
+        justify-content: flex-start;
       }
 
+      &:nth-last-of-type(-n + 2) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      justify-content: center;
+      margin-bottom: 0;
+
+      &:nth-child(even) {
+        justify-content: center;
+      }
     }
 
     &__content {
@@ -29,6 +37,14 @@
       border-radius: 3px;
       background-color: $color-bg-dark;
       box-shadow: 0 6px 6px rgba(169, 140, 106, 0.2);
+
+      @include media-breakpoint-up(sm) {
+        width: 230px;
+      }
+
+      @include media-breakpoint-up(md) {
+        width: 250px;
+      }
     }
 
     &__header {

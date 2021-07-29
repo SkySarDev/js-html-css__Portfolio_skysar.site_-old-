@@ -4,13 +4,17 @@
     text-align: center;
 
     @include media-breakpoint-up(sm) {
-      width: 490px;
+      width: 510px;
     }
 
     @include media-breakpoint-up(md) {
       order: 2;
       width: 550px;
-      padding-right: rem(40);
+      padding-right: rem(45);
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-right: rem(15);
     }
 
     input,
@@ -24,6 +28,7 @@
       background-color: $color-bg-light;
 
       &::placeholder {
+        letter-spacing: 2px;
         color: $font-color-dark;
       }
     }
@@ -48,6 +53,10 @@
         justify-content: flex-start;
         align-items: center;
       }
+
+      @include media-breakpoint-up(lg) {
+        align-items: flex-start;
+      }
     }
 
     &-item {
@@ -67,15 +76,45 @@
       }
     }
 
+    &-link {
+      display: none;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &-item {
+        display: flex;
+        align-items: center;
+      }
+
+      &-link {
+        display: block;
+        margin-left: rem(20);
+
+        a {
+          font-size: rem(24);
+          color: $color-icons;
+
+          @media (hover: hover) {
+            transition: color 0.3s;
+
+            &:hover {
+              color: $color-hover;
+            }
+          }
+        }
+      }
+    }
+
     &-icon {
       width: em(30);
       height: em(30);
       fill: $color-icons;
-      transition: fill 0.3s;
 
       @media (hover: hover) {
+        transition: fill 0.3s;
+
         &:hover {
-          fill: $font-color-dark;
+          fill: $color-hover;
         }
       }
     }

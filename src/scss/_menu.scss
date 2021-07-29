@@ -15,7 +15,7 @@
 
     @media (hover: hover) {
       &:hover {
-        fill: $font-color-dark;
+        fill: $color-hover;
       }
     }
   }
@@ -50,15 +50,20 @@
     }
 
     &-link {
-      margin-right: rem(40);
+      margin-right: em(40);
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       a {
         color: $color-nav;
-        transition: color 0.3s;
 
         @media (hover: hover) {
+          transition: color 0.3s;
+
           &:hover {
-            color: $font-color-dark;
+            color: $color-hover;
           }
         }
       }
