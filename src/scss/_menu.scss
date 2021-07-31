@@ -1,28 +1,35 @@
 .menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   background-color: $color-bg-nav;
   font-size: 1rem;
-  z-index: 1000;
-
-  svg {
-    width: em(25);
-    height: em(25);
-    fill: $color-nav;
-    transition: fill 0.3s;
-
-    @media (hover: hover) {
-      &:hover {
-        fill: $color-hover;
-      }
-    }
-  }
+  position: relative;
 
   &__row {
     height: em(45);
     align-items: center;
+  }
+
+  &__nav-mobile {
+    @include font-second;
+    z-index: 9;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    top: 0;
+    background-color: $color-bg-nav;
+    text-align: center;
+    font-size: rem(22);
+    padding: em(20) 0;
+    transform: translateY(-100%);
+    transition: all 0.3s;
+
+    .active & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
   }
 
   &__socials-list {
@@ -33,6 +40,19 @@
   &__socials-item {
     &:not(:last-child) {
       margin-right: 1em;
+    }
+  }
+
+  &__icons {
+    width: em(25);
+    height: em(25);
+    fill: $color-nav;
+    transition: fill 0.3s;
+
+    @media (hover: hover) {
+      &:hover {
+        fill: $color-hover;
+      }
     }
   }
 
@@ -59,6 +79,12 @@
           &:hover {
             color: $color-hover;
           }
+        }
+      }
+
+      &--mobile {
+        &:not(:last-child) {
+          margin-bottom: em(20);
         }
       }
     }
@@ -109,6 +135,7 @@
 
   &__burger {
     margin-left: 1em;
+    z-index: 10;
 
     &-btn {
       position: relative;
@@ -134,17 +161,17 @@
         transform: translate(-50%, -50%);
         transition: transform 0.25s ease-in-out;
       }
-    }
 
-    &-btn.active {
-      border-color: transparent;
+      .active & {
+        border-color: transparent;
 
-      &:before {
-        transform: translate(-50%, -50%) rotate(45deg);
-      }
+        &:before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
 
-      &:after {
-        transform: translate(-50%, -50%) rotate(-45deg);
+        &:after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
       }
     }
 

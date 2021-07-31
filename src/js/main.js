@@ -1,16 +1,22 @@
-import "../scss/main.scss";
 if (process.env.NODE_ENV === "development") import("../index.html");
+import "../scss/main.scss";
 
 import "../img/projects/preview/irvas.jpg";
 import "../img/projects/preview/be_.jpg";
 
 const burgerBtn = document.getElementById("burger-btn");
 const mainBlocks = document.querySelector(".main__blocks");
+const main = document.querySelector(".main");
+const menu = document.querySelector(".menu");
 
 burgerBtn.addEventListener("click", () => {
-  burgerBtn.classList.toggle("active");
+  menu.classList.toggle("active");
 });
 
-document.querySelector(".menu__nav-list").addEventListener("click", (e) => {
-  mainBlocks.style.transform = `translateX(-${e.target.dataset.swipe}%)`;
+menu.addEventListener("click", (e) => {
+  if (e.target.parentNode.classList.contains("menu__nav-link")) {
+    mainBlocks.style.transform = `translateX(-${e.target.dataset.swipe}%)`;
+    main.scrollTo(0, 0);
+    menu.classList.remove("active");
+  }
 });
