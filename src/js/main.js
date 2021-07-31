@@ -1,6 +1,16 @@
 import "../scss/main.scss";
 if (process.env.NODE_ENV === "development") import("../index.html");
 
-import aboutImg400 from "../img/about-img-400.png";
-import irvasPrev from "../img/projects/preview/irvas.jpg";
-import bePrev from "../img/projects/preview/be_.jpg";
+import "../img/projects/preview/irvas.jpg";
+import "../img/projects/preview/be_.jpg";
+
+const burgerBtn = document.getElementById("burger-btn");
+const mainBlocks = document.querySelector(".main__blocks");
+
+burgerBtn.addEventListener("click", () => {
+  burgerBtn.classList.toggle("active");
+});
+
+document.querySelector(".menu__nav-list").addEventListener("click", (e) => {
+  mainBlocks.style.transform = `translateX(-${e.target.dataset.swipe}%)`;
+});
