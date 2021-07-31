@@ -42,7 +42,7 @@
 
     @include media-breakpoint-up(lg) {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
     }
 
     &-list {
@@ -50,12 +50,6 @@
     }
 
     &-link {
-      margin-right: em(40);
-
-      &:last-child {
-        margin-right: 0;
-      }
-
       a {
         color: $color-nav;
 
@@ -66,6 +60,39 @@
             color: $color-hover;
           }
         }
+      }
+    }
+
+    &-dots {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 3px;
+      height: 100%;
+      margin: 0 20px;
+
+      &:before,
+      &:after,
+      span {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        left: 0;
+        background: $color-nav;
+        border-radius: 50%;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+      }
+
+      &:before {
+        top: 2px;
+      }
+
+      &:after {
+        bottom: 1px;
       }
     }
   }
