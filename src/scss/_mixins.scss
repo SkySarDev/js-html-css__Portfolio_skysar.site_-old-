@@ -17,3 +17,10 @@ $browser-context: 16;
   font-family: Comfortaa-Bold, sans-serif;
   letter-spacing: 0;
 }
+
+@mixin content-wrapper {
+  border: 1px solid $color-line-dark;
+  border-radius: 3px;
+  background-color: $color-bg-dark;
+  box-shadow: 0 6px 6px rgba(169, 140, 106, 0.2);
+}

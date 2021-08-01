@@ -1,7 +1,6 @@
 .projects {
   &__wrapper {
     width: 320px;
-    margin-bottom: em(25);
     overflow: hidden;
     padding: 0;
 
@@ -11,34 +10,32 @@
 
     @include media-breakpoint-up(lg) {
       width: 960px;
-      //overflow: visible;
     }
   }
 
   &__list {
     display: flex;
-
-    @include media-breakpoint-up(lg) {
-      flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
   }
 
   &__item {
+    @include content-wrapper;
     position: relative;
-    border: 1px solid $color-line-dark;
-    border-radius: 3px;
     padding: 5px;
-    background-color: $color-bg-light;
     width: 296px;
-    box-shadow: 0 6px 6px rgba(169, 140, 106, 0.2);
 
     &-wrapper {
       padding: 0 rem(12);
+      margin-bottom: rem(12);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     &-img {
       width: 284px;
-      border: 1px solid $color-line-light;
+      border: 1px solid $color-line-dark;
       border-radius: 3px;
       transition: all 0.5s;
     }

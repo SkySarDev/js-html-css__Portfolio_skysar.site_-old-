@@ -31,12 +31,9 @@
     }
 
     &__content {
+      @include content-wrapper;
       width: 218px;
       padding: em(10) em(15);
-      border: 1px solid $color-line-dark;
-      border-radius: 3px;
-      background-color: $color-bg-dark;
-      box-shadow: 0 6px 6px rgba(169, 140, 106, 0.2);
 
       @include media-breakpoint-up(sm) {
         width: 230px;

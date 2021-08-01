@@ -1,7 +1,10 @@
 .contact {
   &__form {
+    @include content-wrapper;
     width: 300px;
     text-align: center;
+    padding: 12px;
+    margin-bottom: em(25);
 
     @include media-breakpoint-up(sm) {
       width: 510px;
@@ -36,10 +39,6 @@
     textarea {
       resize: none;
     }
-  }
-
-  &__button {
-    margin-bottom: em(20);
   }
 
   &__socials {
