@@ -11,13 +11,8 @@
     }
 
     @include media-breakpoint-up(md) {
-      order: 2;
       width: 550px;
-      padding-right: rem(45);
-    }
-
-    @include media-breakpoint-up(lg) {
-      padding-right: rem(15);
+      margin-bottom: em(30);
     }
 
     input,
@@ -45,17 +40,6 @@
     &-list {
       display: flex;
       justify-content: center;
-
-      @include media-breakpoint-up(md) {
-        order: 1;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      @include media-breakpoint-up(lg) {
-        align-items: flex-start;
-      }
     }
 
     &-item {
@@ -63,44 +47,6 @@
 
       &:last-child {
         margin-right: 0;
-      }
-
-      @include media-breakpoint-up(md) {
-        margin-right: 0;
-        margin-bottom: em(20);
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    &-link {
-      display: none;
-    }
-
-    @include media-breakpoint-up(lg) {
-      &-item {
-        display: flex;
-        align-items: center;
-      }
-
-      &-link {
-        display: block;
-        margin-left: rem(20);
-
-        a {
-          font-size: rem(24);
-          color: $color-icons;
-
-          @media (hover: hover) {
-            transition: color 0.3s;
-
-            &:hover {
-              color: $color-hover;
-            }
-          }
-        }
       }
     }
 

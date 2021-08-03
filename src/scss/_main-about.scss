@@ -1,4 +1,8 @@
 .about {
+  &__content {
+    align-items: center;
+  }
+
   &__img {
     width: 100%;
     min-height: 185px;
@@ -31,13 +35,8 @@
     &-content {
       width: 300px;
 
-      @include media-breakpoint-up(md) {
-        align-self: center;
-      }
-
       @include media-breakpoint-up(lg) {
         width: 320px;
-        font-size: rem(20);
       }
     }
 
@@ -58,7 +57,6 @@
 
       @include media-breakpoint-up(lg) {
         font-size: rem(26);
-        //padding-top: em(25);
       }
     }
 
@@ -82,8 +80,13 @@
     }
 
     &-text {
-      line-height: 130%;
+      line-height: 125%;
+      padding: 0 rem(10);
       text-align: center;
+
+      &:not(:last-child) {
+        margin-bottom: em(25);
+      }
     }
 
     &-button {

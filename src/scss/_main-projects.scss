@@ -17,107 +17,80 @@
     display: flex;
     flex-wrap: wrap;
   }
-
-  &__item {
-    @include content-wrapper;
-    position: relative;
-    padding: 5px;
-    width: 296px;
-
-    &-wrapper {
-      padding: 0 rem(12);
-      margin-bottom: rem(12);
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    &-img {
-      width: 284px;
-      border: 1px solid $color-line-dark;
-      border-radius: 3px;
-      transition: all 0.5s;
-    }
-
-    &-zoom {
-      position: absolute;
-      display: none;
-      justify-content: center;
-      align-items: center;
-      width: 284px;
-      height: 332px;
-      z-index: 10;
-      background: url("../img/icons/zoom-in.svg") center / 70px no-repeat;
-    }
-
-    @media (hover: hover) {
-      cursor: pointer;
-
-      &:hover &-img {
-        background-color: $color-bg-light;
-        opacity: 0.5;
-        transition: all 0.2s;
-      }
-
-      &:hover &-zoom {
-        display: flex;
-      }
-    }
-  }
 }
 
-.slider {
-  display: flex;
-  justify-content: center;
+.project-card {
+  padding: 0 rem(12);
+  margin-bottom: rem(12);
 
-  &__arrow {
-    width: rem(25);
-    height: rem(25);
-    fill: $color-icons;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: rem(24);
+  }
+
+  &__inner {
+    @include content-wrapper;
+    padding: 5px;
+    width: 296px;
+  }
+
+  &__content {
+    position: relative;
+    border: 1px solid $color-line-dark;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  &__title,
+  &__more-info {
+    display: none;
+    position: absolute;
+    background-color: $color-bg-light;
+    width: 100%;
+    padding: rem(10);
+    text-align: center;
+    transition: transform 0.35s;
+    z-index: 10;
+  }
+
+  &__title {
+    top: 0;
+    line-height: 130%;
+    border-bottom: 1px solid $color-line-dark;
+    transform: translateY(-100%);
+  }
+
+  &__more-info {
+    bottom: 0;
+    border-top: 1px solid $color-line-dark;
+    transform: translateY(100%);
+  }
+
+  &__img {
+    width: 284px;
+    transition: all 0.5s;
+  }
+
+  @media (hover: hover) {
     cursor: pointer;
 
-    @include media-breakpoint-up(md) {
-      width: rem(30);
-      height: rem(30);
+    &__title,
+    &__more-info {
+      display: block;
     }
 
-    @media (hover: hover) {
-      transition: fill 0.3s;
-
-      &:hover {
-        fill: $color-hover;
-      }
-    }
-  }
-
-  .arrow-prev {
-    transform: rotate(180deg);
-  }
-
-  &__counter {
-    @include font-second;
-    margin: 0 em(15);
-    width: em(40);
-    color: $color-line-dark;
-
-    &-current {
-      position: relative;
-
-      &:after {
-        content: "";
-        position: absolute;
-        top: em(13);
-        left: em(7);
-        width: 30px;
-        height: 1px;
-        background-color: $color-line-dark;
-        transform: rotate(140deg);
-      }
+    &:hover &__title,
+    &:hover &__more-info {
+      transform: translateY(0);
     }
 
-    &-total {
-      text-align: right;
+    &:hover &__img {
+      background-color: $color-bg-light;
+      opacity: 0.5;
+      transition: all 0.5s;
     }
   }
 }
