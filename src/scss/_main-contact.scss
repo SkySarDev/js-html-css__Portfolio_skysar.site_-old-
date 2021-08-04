@@ -1,6 +1,7 @@
 .contact {
   &__form {
     @include content-wrapper;
+    position: relative;
     width: 300px;
     text-align: center;
     padding: 12px;
@@ -33,6 +34,10 @@
 
     textarea {
       resize: none;
+    }
+
+    #honeypot {
+      display: none;
     }
   }
 

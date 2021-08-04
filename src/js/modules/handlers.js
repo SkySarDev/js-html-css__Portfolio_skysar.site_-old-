@@ -1,12 +1,12 @@
 import swipePage from "./swipePage";
+import sendForm from "./sendForm";
 
 const handlers = () => {
   const menu = document.querySelector(".menu");
   const main = document.querySelector(".main");
+  const contactForm = document.getElementById("contact-form");
 
   menu.addEventListener("click", (e) => {
-    e.preventDefault();
-
     const target = e.target;
 
     if (target.classList.contains("menu__burger-btn")) {
@@ -36,12 +36,19 @@ const handlers = () => {
   });
 
   main.addEventListener("click", (e) => {
-    e.preventDefault();
     const target = e.target;
 
     if (target.classList.contains("main-nav__link")) {
       swipePage(target.getAttribute("href").substring(1));
     }
+  });
+
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    sendForm(contactForm);
+
+    contactForm.reset();
   });
 };
 
