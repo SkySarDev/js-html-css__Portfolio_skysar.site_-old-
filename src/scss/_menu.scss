@@ -1,16 +1,10 @@
 .menu {
   background-color: $color-bg-nav;
   font-size: 1rem;
-  position: relative;
 
-  &__row {
-    height: em(45);
-    align-items: center;
-  }
-
-  &__nav-mobile {
+  &-mobile {
     @include font-second;
-    z-index: 9;
+    z-index: 1;
     position: absolute;
     opacity: 0;
     width: 100%;
@@ -18,7 +12,7 @@
     background-color: $color-bg-nav;
     text-align: center;
     font-size: rem(22);
-    padding: em(20) 0;
+    padding-top: em(40);
     transform: translateY(-100%);
     transition: all 0.3s;
 
@@ -27,9 +21,49 @@
       transform: translateY(0);
     }
 
+    &__nav-list {
+      border-top: 1px dashed $color-nav;
+      padding: rem(20) 0;
+    }
+
+    &__nav-link {
+      margin-bottom: rem(25);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      &__nav-list {
+        display: flex;
+        justify-content: center;
+      }
+
+      &__nav-link {
+        margin-bottom: 0;
+        margin-right: em(20);
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
     @include media-breakpoint-up(lg) {
       display: none;
     }
+  }
+
+  &__container {
+    position: relative;
+    background-color: $color-bg-nav;
+    z-index: 10;
+  }
+
+  &__row {
+    height: em(45);
+    align-items: center;
   }
 
   &__socials-list {
@@ -79,12 +113,6 @@
           &:hover {
             color: $color-hover;
           }
-        }
-      }
-
-      &--mobile {
-        &:not(:last-child) {
-          margin-bottom: em(20);
         }
       }
     }
