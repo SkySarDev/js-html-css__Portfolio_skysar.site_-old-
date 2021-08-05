@@ -32,6 +32,7 @@ const handlers = () => {
     if (target.parentNode.classList.contains("menu__nav-link")) {
       swipePage(target.getAttribute("href").substring(1));
       menu.classList.remove("active");
+      menu.classList.remove("active");
     }
   });
 

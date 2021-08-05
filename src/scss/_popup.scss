@@ -1,0 +1,67 @@
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+  z-index: 1000;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: rem(10);
+    right: rem(10);
+    width: em(25);
+    height: em(25);
+    fill: $font-color-dark;
+    cursor: pointer;
+  }
+}
+
+.notification {
+  &__body {
+    @include content-wrapper;
+    position: relative;
+    margin-top: 30%;
+    width: 300px;
+    padding: rem(20) rem(15);
+    font-size: rem(22);
+
+    @include media-breakpoint-up(md) {
+      margin-top: 20%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 15%;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    margin-bottom: em(25);
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__message {
+    margin-bottom: em(15);
+  }
+
+  &__img svg {
+    width: em(30);
+    height: em(30);
+  }
+}
+
+.notification.show {
+  visibility: visible;
+  opacity: 1;
+}
