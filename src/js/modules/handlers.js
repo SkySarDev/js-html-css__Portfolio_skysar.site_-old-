@@ -1,10 +1,12 @@
 import swipePage from "./swipePage";
 import sendForm from "./sendForm";
+import popupShowHide from "./popupShowHide";
 
 const handlers = () => {
   const menu = document.querySelector(".menu");
   const main = document.querySelector(".main");
   const contactForm = document.getElementById("contact-form");
+  const popup = document.querySelector(".notification");
 
   menu.addEventListener("click", (e) => {
     const target = e.target;
@@ -40,10 +42,8 @@ const handlers = () => {
   });
 
   main.addEventListener("click", (e) => {
-    const target = e.target;
-
-    if (target.classList.contains("main-nav__link")) {
-      swipePage(target.getAttribute("href").substring(1));
+    if (e.target.classList.contains("main-nav__link")) {
+      swipePage(e.target.getAttribute("href").substring(1));
     }
   });
 
@@ -53,6 +53,15 @@ const handlers = () => {
     sendForm(contactForm);
 
     contactForm.reset();
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (
+      e.target.classList.contains("popup__close") ||
+      !e.target.closest(".popup__body")
+    ) {
+      popupShowHide(".notification", false);
+    }
   });
 };
 

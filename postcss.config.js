@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === "production") {
       require("autoprefixer"),
       purgecss({
         content: ["./**/*.html"],
-        safelist: ["active"],
+        safelist: ["active", "show"],
       }),
     ],
   };

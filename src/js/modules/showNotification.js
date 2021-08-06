@@ -1,3 +1,5 @@
+import popupShowHide from "./popupShowHide";
+
 const showNotification = (message, imageID) => {
   document.querySelector(".notification__message").textContent = message;
   document.querySelector(".notification__img").innerHTML = `
@@ -5,7 +7,7 @@ const showNotification = (message, imageID) => {
       <use xlink:href="#${imageID}"></use>
     </svg>`;
 
-  document.getElementById("notification").classList.add("show");
+  popupShowHide(".notification", true);
 };
 
 export default showNotification;
