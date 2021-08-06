@@ -10,28 +10,31 @@ const handlers = () => {
     const target = e.target;
 
     if (target.classList.contains("menu__burger-btn")) {
-      menu.classList.add("active");
+      if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+      } else {
+        menu.classList.add("active");
 
-      setTimeout(() => {
-        document.body.addEventListener(
-          "click",
-          (e) => {
-            const target = e.target;
+        setTimeout(() => {
+          document.body.addEventListener(
+            "click",
+            (e) => {
+              const target = e.target;
 
-            if (target.classList.contains("menu-mobile__link")) {
-              swipePage(target.getAttribute("href").substring(1));
-            }
+              if (target.classList.contains("menu-mobile__link")) {
+                swipePage(target.getAttribute("href").substring(1));
+              }
 
-            menu.classList.remove("active");
-          },
-          { once: true }
-        );
-      }, 0);
+              menu.classList.remove("active");
+            },
+            { once: true }
+          );
+        }, 0);
+      }
     }
 
     if (target.parentNode.classList.contains("menu__nav-link")) {
       swipePage(target.getAttribute("href").substring(1));
-      menu.classList.remove("active");
       menu.classList.remove("active");
     }
   });
