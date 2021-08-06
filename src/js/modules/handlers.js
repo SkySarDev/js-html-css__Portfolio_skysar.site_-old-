@@ -6,7 +6,7 @@ const handlers = () => {
   const menu = document.querySelector(".menu");
   const main = document.querySelector(".main");
   const contactForm = document.getElementById("contact-form");
-  const popup = document.querySelector(".notification");
+  const popup = document.querySelector(".popup");
 
   menu.addEventListener("click", (e) => {
     const target = e.target;
@@ -60,7 +60,7 @@ const handlers = () => {
       e.target.classList.contains("popup__close") ||
       !e.target.closest(".popup__body")
     ) {
-      popupShowHide(".notification", false);
+      popupShowHide(".popup-notification", false);
     }
   });
 };

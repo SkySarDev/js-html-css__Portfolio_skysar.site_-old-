@@ -7,7 +7,7 @@ const sendForm = (data) => {
 
     const popupHide = () => {
       setTimeout(() => {
-        popupShowHide(".notification", false);
+        popupShowHide(".popup-notification", false);
       }, 5000);
     };
 
