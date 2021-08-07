@@ -7,7 +7,7 @@ const showNotification = (message, imageID) => {
       <use xlink:href="#${imageID}"></use>
     </svg>`;
 
-  popupShowHide(".popup-notification", true);
+  popupShowHide(document.querySelector(".popup-notification"), true);
 };
 
 export default showNotification;

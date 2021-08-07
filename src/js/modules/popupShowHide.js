@@ -1,15 +1,14 @@
-const popupShowHide = (popupSelector, show) => {
-  const popupWrapper = document.querySelector(".popup");
-  const popup = document.querySelector(popupSelector);
+const popupShowHide = (popup, show) => {
+  const popupContent = popup.querySelector(".popup__content");
 
   if (show) {
-    popupWrapper.classList.add("show");
+    popup.classList.add("show");
 
-    setTimeout(() => popup.classList.add("show"), 10);
+    setTimeout(() => popupContent.classList.add("show"), 50);
   } else {
-    popup.classList.remove("show");
+    popupContent.classList.remove("show");
 
-    setTimeout(() => popupWrapper.classList.remove("show"), 500);
+    setTimeout(() => popup.classList.remove("show"), 400);
   }
 };
 

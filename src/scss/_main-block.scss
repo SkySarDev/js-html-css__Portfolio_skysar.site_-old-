@@ -93,6 +93,18 @@
 
   &-nav {
     justify-content: center;
+
+    &__link {
+      max-width: 130px;
+
+      @include media-breakpoint-up(sm) {
+        max-width: 100%;
+      }
+
+      &--first {
+        margin-left: auto;
+      }
+    }
   }
 }
 

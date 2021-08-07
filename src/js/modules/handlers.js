@@ -6,7 +6,8 @@ const handlers = () => {
   const menu = document.querySelector(".menu");
   const main = document.querySelector(".main");
   const contactForm = document.getElementById("contact-form");
-  const popup = document.querySelector(".popup");
+  const popups = document.querySelectorAll(".popup");
+  const projectsList = document.querySelector(".projects__list");
 
   menu.addEventListener("click", (e) => {
     const target = e.target;
@@ -55,12 +56,24 @@ const handlers = () => {
     contactForm.reset();
   });
 
-  popup.addEventListener("click", (e) => {
-    if (
-      e.target.classList.contains("popup__close") ||
-      !e.target.closest(".popup__body")
-    ) {
-      popupShowHide(".popup-notification", false);
+  popups.forEach((popup) => {
+    popup.addEventListener("click", (e) => {
+      const target = e.target;
+
+      if (
+        target.classList.contains("popup__close") ||
+        !target.closest(".popup__wrapper")
+      ) {
+        popupShowHide(target.closest(".popup"), false);
+      }
+    });
+  });
+
+  projectsList.addEventListener("click", (e) => {
+    const target = e.target;
+
+    if (target.closest(".projects__item")) {
+      popupShowHide(document.querySelector(".popup-projects"), true);
     }
   });
 };
