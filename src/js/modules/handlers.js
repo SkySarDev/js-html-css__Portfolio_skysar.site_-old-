@@ -1,6 +1,7 @@
 import swipePage from "./swipePage";
 import sendForm from "./sendForm";
 import popupShowHide from "./popupShowHide";
+import showProject from "./showProject";
 
 const handlers = () => {
   const menu = document.querySelector(".menu");
@@ -50,9 +51,7 @@ const handlers = () => {
 
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
-
     sendForm(contactForm);
-
     contactForm.reset();
   });
 
@@ -70,10 +69,10 @@ const handlers = () => {
   });
 
   projectsList.addEventListener("click", (e) => {
-    const target = e.target;
+    const project = e.target.closest(".projects__item");
 
-    if (target.closest(".projects__item")) {
-      popupShowHide(document.querySelector(".popup-projects"), true);
+    if (project) {
+      showProject(project.getAttribute("data-key"));
     }
   });
 };

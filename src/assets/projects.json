@@ -1,0 +1,23 @@
+{
+  "be": {
+    "title": "Be. Blog",
+    "description": "Blog about language learning.",
+    "link": "/be_",
+    "github": "",
+    "img": "be-full.png"
+  },
+  "irvas": {
+    "title": "Irvas",
+    "description": "Landing page for a company engaged in glazing balconies and loggias.",
+    "link": "/irvas",
+    "github": "",
+    "img": "irvas-full.png"
+  },
+  "relax-live": {
+    "title": "Relax Live",
+    "description": "Landing page for a company engaged in repairing apartments.",
+    "link": "/relax-live",
+    "github": "https://github.com/SkySarDev/Glo-Academy-Diplom",
+    "img": "relax-live-full.png"
+  }
+}
