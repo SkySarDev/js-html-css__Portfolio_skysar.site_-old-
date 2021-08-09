@@ -1,7 +1,7 @@
 import swipePage from "./swipePage";
 import sendForm from "./sendForm";
 import popupShowHide from "./popupShowHide";
-import showProject from "./showProject";
+import showProjectPopup from "./showProjectPopup";
 
 const handlers = () => {
   const menu = document.querySelector(".menu");
@@ -72,7 +72,7 @@ const handlers = () => {
     const project = e.target.closest(".projects__item");
 
     if (project) {
-      showProject(project.getAttribute("data-key"));
+      showProjectPopup(project.getAttribute("data-key"));
     }
   });
 };

@@ -163,7 +163,15 @@
 
       img {
         width: 100%;
-        max-width: 700px;
+        max-width: 320px;
+
+        @media (min-width: 400px) {
+          max-width: 470px;
+        }
+
+        @include media-breakpoint-up(md) {
+          max-width: 700px;
+        }
       }
     }
   }

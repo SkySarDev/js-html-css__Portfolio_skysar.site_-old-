@@ -1,7 +1,7 @@
 import getData from "./getData";
 import popupShowHide from "./popupShowHide";
 
-const showProject = (projectKey) => {
+const showProjectPopup = (projectKey) => {
   const renderProject = (data) => {
     const projectField = document.querySelector(".popup-project__field");
     const projectBody = document.createElement("div");
@@ -31,7 +31,12 @@ const showProject = (projectKey) => {
           ${data.github ? createButton(data.github, "github", "GitHub") : ""}
         </div>
         <div class="popup-project__img">
-          <img src="../img/projects/full/${data.img}" alt="${data.title}" />
+          <img srcset="../img/projects/full/${data.img}-320w.png 400w,
+               ../img/projects/full/${data.img}-470w.png 470w,
+               ../img/projects/full/${data.img}-700w.png 700w"
+               sizes="(max-width: 400px) 400px, (max-width: 767px) 470px, 700px"
+               src="../img/projects/full/${data.img}-700w.png"
+               alt="${data.title}" />
         </div>`;
 
     projectField.appendChild(projectBody);
@@ -44,4 +49,4 @@ const showProject = (projectKey) => {
     .catch((err) => console.log(err));
 };
 
-export default showProject;
+export default showProjectPopup;
