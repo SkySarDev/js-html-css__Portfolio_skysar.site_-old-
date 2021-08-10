@@ -2,6 +2,7 @@ import swipePage from "./swipePage";
 import sendForm from "./sendForm";
 import popupShowHide from "./popupShowHide";
 import showProjectPopup from "./showProjectPopup";
+import languageSwitch from "./languageSwitch";
 
 const handlers = () => {
   const menu = document.querySelector(".menu");
@@ -40,6 +41,10 @@ const handlers = () => {
     if (target.parentNode.classList.contains("menu__nav-link")) {
       swipePage(target.getAttribute("href").substring(1));
       menu.classList.remove("active");
+    }
+
+    if (target.closest(".menu__lang")) {
+      languageSwitch(target.closest(".menu__lang").getAttribute("data-lang"));
     }
   });
 

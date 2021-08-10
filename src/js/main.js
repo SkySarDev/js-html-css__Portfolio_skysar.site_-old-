@@ -1,6 +1,10 @@
 "use strict";
 
-if (process.env.NODE_ENV === "development") import("../index.html");
+if (process.env.NODE_ENV === "development") {
+  import("../index.html");
+  import("../ru/index.html");
+}
+
 import "../scss/main.scss";
 
 import "../img/projects/preview/irvas.jpg";
@@ -23,5 +27,21 @@ import "../img/projects/full/3d-glo-700w.png";
 import handlers from "./modules/handlers";
 
 document.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("lang")) {
+    if (
+      window.location.pathname === "/" &&
+      localStorage.getItem("lang") === "ru"
+    ) {
+      window.location.replace("/ru");
+    }
+
+    if (
+      window.location.pathname === "/ru" &&
+      localStorage.getItem("lang") === "en"
+    ) {
+      window.location.replace("/");
+    }
+  }
+
   handlers();
 });
