@@ -1,30 +1,42 @@
 {
-  "be": {
-    "title": "Be. Blog",
-    "description": "Blog about language learning.",
-    "link": "https://skysar.site/be_",
-    "github": "",
-    "img": "be"
-  },
-  "irvas": {
-    "title": "Irvas",
-    "description": "Landing page for a company engaged in glazing balconies and loggias.",
-    "link": "https://skysar.site/irvas",
-    "github": "",
-    "img": "irvas"
-  },
   "relax-live": {
     "title": "Relax Live",
-    "description": "Landing page for a company engaged in repairing apartments.",
+    "description": {
+      "en": "Landing page for a company engaged in repairing apartments.",
+      "ru": "Лэндинг компании, занимающейся ремонтом жилых помещений."
+    },
     "link": "https://skysar.site/relax-live",
     "github": "https://github.com/SkySarDev/js_Relax-Live",
     "img": "relax-live"
   },
   "3d-glo": {
     "title": "3D Glo",
-    "description": "3D Modeling Services, interior and exterior design.",
+    "description": {
+      "en": "3D Modeling Services, interior and exterior design.",
+      "ru": "Услуги по 3D моделированию, дизайну интерьера и экстерьера."
+    },
     "link": "https://skysar.site/3d-glo",
     "github": "https://github.com/SkySarDev/js_3D-Glo",
     "img": "3d-glo"
+  },
+  "irvas": {
+    "title": "Irvas",
+    "description": {
+      "en": "Landing page for a company engaged in glazing balconies and loggias.",
+      "ru": "Лэндинг компании, занимающейся остеклением балконов и лоджий в Москве и Московской области."
+    },
+    "link": "https://skysar.site/irvas",
+    "github": "",
+    "img": "irvas"
+  },
+  "be": {
+    "title": "Be. Blog",
+    "description": {
+      "en": "Blog about languages learning.",
+      "ru": "Блог об изучении иностранных языков."
+    },
+    "link": "https://skysar.site/be_",
+    "github": "",
+    "img": "be"
   }
 }

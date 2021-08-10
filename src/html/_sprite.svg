@@ -24,17 +24,14 @@
   </symbol>
   <symbol
     xmlns="http://www.w3.org/2000/svg"
-    shape-rendering="geometricPrecision"
-    text-rendering="geometricPrecision"
     image-rendering="optimizeQuality"
-    fill-rule="evenodd"
-    clip-rule="evenodd"
     viewBox="0 0 4335 4335"
     id="lang-en"
   >
     <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
       d="M542 119h3251c233 0 423 190 423 423v3251c0 233-190 423-423 423H542c-233 0-423-190-423-423V542c0-233 190-423 423-423zm1257 2849H851V1367h911v279h-569v377h529v278h-529v388h607v279zm1686 0h-350l-678-1036c-35-54-61-97-77-130h-5c6 55 9 140 9 255v911h-323V1367h372l653 1006c43 67 70 109 79 127h5c-7-39-10-113-10-221v-913h324v1601z"
-      fill="#2b2a29"
     ></path>
   </symbol>
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" id="lang-ru">

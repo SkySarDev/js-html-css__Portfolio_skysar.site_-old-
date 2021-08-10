@@ -3,6 +3,7 @@ import popupShowHide from "./popupShowHide";
 
 const showProjectPopup = (projectKey) => {
   const renderProject = (data) => {
+    const lang = localStorage.getItem("lang") || "en";
     const projectField = document.querySelector(".popup-project__field");
     const projectBody = document.createElement("div");
 
@@ -24,7 +25,9 @@ const showProjectPopup = (projectKey) => {
     projectBody.innerHTML = `
         <div class="popup-project__header">
           <h4 class="popup-project__title">${data.title}</h4>
-          <div class="popup-project__description">${data.description}</div>
+          <div class="popup-project__description">
+            ${data.description[lang]}
+          </div>
         </div>
         <div class="popup-project__nav row">
           ${data.link ? createButton(data.link, "link", "Demo") : ""}

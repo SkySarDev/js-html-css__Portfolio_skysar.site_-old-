@@ -69,6 +69,14 @@ const plugins = () => {
         collapseWhitespace: isProd,
       },
     }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "./src/ru/index.html"),
+      filename: "./ru/index.html",
+      minify: {
+        removeComments: isProd,
+        collapseWhitespace: isProd,
+      },
+    }),
     new CopyWebpackPlugin({
       patterns: [
         {
