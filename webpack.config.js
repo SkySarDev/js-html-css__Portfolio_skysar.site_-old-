@@ -87,6 +87,16 @@ const plugins = () => {
             ["gifsicle", { interlaced: true }],
             ["jpegtran", { progressive: true }],
             ["optipng", { optimizationLevel: 5 }],
+            [
+              "svgo",
+              {
+                plugins: [
+                  {
+                    removeViewBox: false,
+                  },
+                ],
+              },
+            ],
           ],
         },
       })
@@ -150,16 +160,12 @@ module.exports = {
         },
       },
       {
-        test: /\.(?:ico)$/i,
+        test: /\.ico$/i,
         type: "asset/resource",
         generator: {
           filename: "[name][ext]",
         },
       },
-      // {
-      //     test: /\.svg$/,
-      //     use: ['svg-sprite-loader', 'svgo-loader'],
-      // },
       {
         test: /\.(?:gif|png|jpg|jpeg|svg)$/i,
         type: "asset/resource",
@@ -170,11 +176,11 @@ module.exports = {
     ],
   },
   devServer: {
-    port: 7777,
+    port: 3000,
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, "./dist"),
     hot: true,
     compress: true,
-    open: false,
+    open: true,
   },
 };
