@@ -2,22 +2,29 @@
   "be": {
     "title": "Be. Blog",
     "description": "Blog about language learning.",
-    "link": "/be_",
+    "link": "https://skysar.site/be_",
     "github": "",
     "img": "be"
   },
   "irvas": {
     "title": "Irvas",
     "description": "Landing page for a company engaged in glazing balconies and loggias.",
-    "link": "/irvas",
+    "link": "https://skysar.site/irvas",
     "github": "",
     "img": "irvas"
   },
   "relax-live": {
     "title": "Relax Live",
     "description": "Landing page for a company engaged in repairing apartments.",
-    "link": "/relax-live",
-    "github": "https://github.com/SkySarDev/Glo-Academy-Diplom",
+    "link": "https://skysar.site/relax-live",
+    "github": "https://github.com/SkySarDev/js_Relax-Live",
     "img": "relax-live"
+  },
+  "3d-glo": {
+    "title": "3D Glo",
+    "description": "3D Modeling Services, interior and exterior design.",
+    "link": "https://skysar.site/3d-glo",
+    "github": "https://github.com/SkySarDev/js_3D-Glo",
+    "img": "3d-glo"
   }
 }
