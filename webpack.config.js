@@ -6,6 +6,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const { extendDefaultPlugins } = require("svgo");
 const fs = require("fs");
 
 const isDev = process.env.NODE_ENV === "development";
@@ -90,11 +91,12 @@ const plugins = () => {
             [
               "svgo",
               {
-                plugins: [
+                plugins: extendDefaultPlugins([
                   {
-                    removeViewBox: false,
+                    name: "removeViewBox",
+                    active: false,
                   },
-                ],
+                ]),
               },
             ],
           ],
