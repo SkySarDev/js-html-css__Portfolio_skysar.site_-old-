@@ -1,3 +1,5 @@
 const languageSwitch = (lang) => localStorage.setItem("lang", lang);
 
-export default languageSwitch;
+const getCurrentLang = () => localStorage.getItem("lang") || "en";
+
+export { languageSwitch, getCurrentLang };

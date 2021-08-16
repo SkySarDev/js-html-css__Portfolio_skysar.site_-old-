@@ -2,7 +2,7 @@ import swipePage from "./swipePage";
 import sendForm from "./sendForm";
 import popupShowHide from "./popupShowHide";
 import showProjectPopup from "./showProjectPopup";
-import languageSwitch from "./languageSwitch";
+import { languageSwitch } from "./languageFuncs";
 
 const handlers = () => {
   const menu = document.querySelector(".menu");

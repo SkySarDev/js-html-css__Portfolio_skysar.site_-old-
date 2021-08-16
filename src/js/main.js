@@ -25,20 +25,17 @@ import "../img/projects/full/3d-glo-470w.png";
 import "../img/projects/full/3d-glo-700w.png";
 
 import handlers from "./modules/handlers";
+import { getCurrentLang } from "./modules/languageFuncs";
 
 document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("lang")) {
-    if (
-      window.location.pathname === "/" &&
-      localStorage.getItem("lang") === "ru"
-    ) {
+    const currentLanguage = getCurrentLang();
+
+    if (window.location.pathname === "/" && currentLanguage === "ru") {
       window.location.replace("/ru");
     }
 
-    if (
-      window.location.pathname === "/ru" &&
-      localStorage.getItem("lang") === "en"
-    ) {
+    if (window.location.pathname === "/ru" && currentLanguage === "en") {
       window.location.replace("/");
     }
   }
