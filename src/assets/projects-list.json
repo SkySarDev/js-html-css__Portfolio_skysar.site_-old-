@@ -1,7 +1,12 @@
 {
   "relax-live": {
     "title": "Relax Live",
+    "key": "relax-live",
     "description": {
+      "en": "Repair of apartments",
+      "ru": "Ремонт жилых помещений"
+    },
+    "full-description": {
       "en": "Landing page for a company engaged in repairing apartments.",
       "ru": "Лэндинг компании, занимающейся ремонтом жилых помещений."
     },
@@ -11,7 +16,12 @@
   },
   "3d-glo": {
     "title": "3D Glo",
+    "key": "3d-glo",
     "description": {
+      "en": "3D Modeling Services",
+      "ru": "Услуги по 3D моделированию"
+    },
+    "full-description": {
       "en": "3D Modeling Services, interior and exterior design.",
       "ru": "Услуги по 3D моделированию, дизайну интерьера и экстерьера."
     },
@@ -21,7 +31,12 @@
   },
   "irvas": {
     "title": "Irvas",
+    "key": "irvas",
     "description": {
+      "en": "Balcony glazing",
+      "ru": "Остекление балконов и лоджий"
+    },
+    "full-description": {
       "en": "Landing page for a company engaged in glazing balconies and loggias.",
       "ru": "Лэндинг компании, занимающейся остеклением балконов и лоджий в Москве и Московской области."
     },
@@ -31,7 +46,12 @@
   },
   "be": {
     "title": "Be. Blog",
+    "key": "be",
     "description": {
+      "en": "Blog about languages learning",
+      "ru": "Блог об изучении иностранных языков"
+    },
+    "full-description": {
       "en": "Blog about languages learning.",
       "ru": "Блог об изучении иностранных языков."
     },

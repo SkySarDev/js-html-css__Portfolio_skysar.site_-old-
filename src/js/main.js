@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === "development") {
 import "../scss/main.scss";
 
 import "../img/projects/preview/irvas.jpg";
-import "../img/projects/preview/be_.jpg";
+import "../img/projects/preview/be.jpg";
 import "../img/projects/preview/3d-glo.jpg";
 import "../img/projects/preview/relax-live.jpg";
 import "../img/projects/full/be-320w.png";
@@ -25,6 +25,7 @@ import "../img/projects/full/3d-glo-470w.png";
 import "../img/projects/full/3d-glo-700w.png";
 
 import handlers from "./modules/handlers";
+import renderProjects from "./modules/renderProjects";
 import { getCurrentLang } from "./modules/languageFuncs";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -41,4 +42,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   handlers();
+  renderProjects();
 });
