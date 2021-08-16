@@ -28,7 +28,7 @@ const showProjectPopup = (projectKey) => {
         <div class="popup-project__header">
           <h4 class="popup-project__title">${data.title}</h4>
           <div class="popup-project__description">
-            ${data.description[getCurrentLang()]}
+            ${data["full-description"][getCurrentLang()]}
           </div>
         </div>
         <div class="popup-project__nav row">
