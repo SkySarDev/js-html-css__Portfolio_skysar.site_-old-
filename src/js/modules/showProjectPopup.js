@@ -1,10 +1,12 @@
 import getData from "./getData";
 import popupShowHide from "./popupShowHide";
+import showNotification from "./showNotification";
+import { getCurrentLang } from "./languageFuncs";
 
 const showProjectPopup = (projectKey) => {
+  const projectField = document.querySelector(".popup-project__field");
+
   const renderProject = (data) => {
-    const lang = localStorage.getItem("lang") || "en";
-    const projectField = document.querySelector(".popup-project__field");
     const projectBody = document.createElement("div");
 
     const createButton = (url, tag, text) => `
@@ -26,7 +28,7 @@ const showProjectPopup = (projectKey) => {
         <div class="popup-project__header">
           <h4 class="popup-project__title">${data.title}</h4>
           <div class="popup-project__description">
-            ${data.description[lang]}
+            ${data.description[getCurrentLang()]}
           </div>
         </div>
         <div class="popup-project__nav row">
@@ -47,9 +49,16 @@ const showProjectPopup = (projectKey) => {
     popupShowHide(document.querySelector(".popup-project"), true);
   };
 
-  getData("../assets/projects.json", "GET")
+  getData("../assets/projects-list.json", "GET")
     .then((res) => renderProject(res[projectKey]))
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      const errorMsg = {
+        en: "Data loading error",
+        ru: "Ошибка загрузки данных",
+      };
+
+      showNotification(errorMsg[getCurrentLang()], "check-no");
+    });
 };
 
 export default showProjectPopup;
