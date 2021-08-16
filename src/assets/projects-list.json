@@ -14,6 +14,21 @@
     "github": "https://github.com/SkySarDev/js_Relax-Live",
     "img": "relax-live"
   },
+  "pictures-art": {
+    "title": "Pictures Art",
+    "key": "pictures-art",
+    "description": {
+      "en": "Turn a photo into a real painting!",
+      "ru": "Преврати фотографию в настоящую картину!"
+    },
+    "full-description": {
+      "en": "Landing for company that create paintings from photographs.",
+      "ru": "Лэндинг компании, создающей картины из фотографий."
+    },
+    "link": "https://skysar.site/pictures-art",
+    "github": "https://github.com/SkySarDev/js_Pictures-Art",
+    "img": "pictures-art"
+  },
   "3d-glo": {
     "title": "3D Glo",
     "key": "3d-glo",
