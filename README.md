@@ -2,9 +2,6 @@
 
 My Site-portfolio
 
-### **Demo**
-https://skysar.site/
-
 ### **Commands**
 
 - Install: `npm install`
